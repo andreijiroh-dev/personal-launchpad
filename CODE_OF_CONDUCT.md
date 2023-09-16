@@ -8,3 +8,9 @@ themselves due to personal reasons).
 
 [ccoc]: https://github.com/recaptime-dev/squad/blob/main/CODE_OF_CONDUCT.md
 [contributor-convenant]: https://www.contributor-covenant.org/version/2/1/code_of_conduct.html
+
+## Contacts for moderation team
+
+**Main contact**: [Andrei Jiroh Halili](https://ajhalili2006.start.page)
+
+**Alternative contacts**: TBA
