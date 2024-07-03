@@ -1,0 +1,37 @@
+# This YAML is where we manage GitHub labels as code
+
+## The basics
+- name: bug
+  description: Something isn't working
+  color: d73a4a
+- name: documentation
+  description: Improvements or additions to the documentation, especially on the wiki and contributing guidelines.
+- name: duplicate
+  description: This issue or patch/merge request already exists
+  color: cfd3d7
+- name: enchancement
+  description: New feature or request
+  color: a2eeef
+- name: good first issue
+  description: Good for first-time contributors
+  color: 7057ff
+- name: help wanted
+  description: Extra attention and assistance required
+  color: 008672
+- name: invalid
+  description: This doesn't seem right
+  color: e4e669
+- name: missing info
+  from_name: question
+  description: Further information is requested
+  color: d876e3
+- name: wontfix
+  description: THis will not be worked on
+  color: ffffff
+
+## GitHub issue form identifiers
+- name: 'gh-issue-form: default'
+  description: "[FOR TRIAGEOPS ONLY - DO NOT REMOVE] Issues made using the default form"
+  color: 8D7471
+
+## TODO: Import labels from sourcehut todo and JetBrains YouTrack/Space Cloud counterparts.
