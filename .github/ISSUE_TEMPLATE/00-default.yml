@@ -106,6 +106,7 @@ body:
         - community
         - opensource
         - multifandom
+        - hackclub-acrade
     validations:
       required: true
   - type: textarea

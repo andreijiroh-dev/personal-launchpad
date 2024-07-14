@@ -28,10 +28,23 @@
 - name: wontfix
   description: THis will not be worked on
   color: ffffff
+- name: upstream
+  description: The issue is being flagged on or imported/copied from upstream.
+
+# project specifics
+- name: hackclub-acrade
+  description: ec3750
+- name: open-source
+  color: ffffff
 
 ## GitHub issue form identifiers
 - name: 'gh-issue-form: default'
   description: "[FOR TRIAGEOPS ONLY - DO NOT REMOVE] Issues made using the default form"
   color: 8D7471
+- name: 'gh-issue-form: access-requests'
+  description: "[FOR TRIAGEOPS ONLY - DO NOT REMOVE] Issues made using the access request form"
+  color: 8D7471
+- name: "gh-issue-form: public-inbox"
+  description: "[FOR TRIAGEOPS ONLY - DO NOT REMOVE] Public inbox messages as GitHub issues, may autoconverted into discussion posts"
 
 ## TODO: Import labels from sourcehut todo and JetBrains YouTrack/Space Cloud counterparts.
