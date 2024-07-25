@@ -29,6 +29,7 @@ jobs:
           private-key: ${{ steps.dotenvx.outputs.GH_APP_KEY }}
       - name: Sync labels using config
         uses: crazy-max/ghaction-github-labeler@v5
+        continue-on-error: true
         with:
           github-token: ${{ steps.app-token.outputs.token }}
           yaml-file: .github/labels.yml

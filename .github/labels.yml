@@ -47,6 +47,6 @@
   description: "[FOR TRIAGEOPS ONLY - DO NOT REMOVE] Issues made using the access request form"
   color: 8D7471
 - name: "gh-issue-form: public-inbox"
-  description: "[FOR TRIAGEOPS ONLY - DO NOT REMOVE] Public inbox messages as GitHub issues, may autoconverted into discussion posts"
+  description: "[FOR TRIAGEOPS ONLY - DO NOT REMOVE] Public inbox-styled threads"
 
 ## TODO: Import labels from sourcehut todo and JetBrains YouTrack/Space Cloud counterparts.
