@@ -33,9 +33,11 @@
 
 # project specifics
 - name: hackclub-acrade
-  description: ec3750
+  color: ec3750
+  description: Issues relating to participation on Hack Club Arcade
 - name: open-source
   color: ffffff
+  descriptions: Issues relating to open-source work and projects.
 
 ## GitHub issue form identifiers
 - name: 'gh-issue-form: default'

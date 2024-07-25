@@ -14,11 +14,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Download .env.ci from central repo
+        run: wget -O .env.ci https://github.com/andreijiroh-dev/dotenvx-secretstore/raw/main/.env.ci
+      - name: Load secrets via dotenvx
+        uses: andreijiroh-dev/dotenvx-action@main
+        with:
+          path: .env.ci
+          key: ${{ secrets.DOTENV_META_SECRETS_KEY_CI }}
+        id: dotenvx
       - uses: actions/create-github-app-token@v1
         id: app-token
         with:
-          app-id: ${{ secrets.GH_RTDEV_APP_CLIENT_ID }}
-          private-key: ${{ secrets.GH_RTDEV_APP_KEY }}
+          app-id: ${{ steps.dotenvx.outputs.GH_APP_ID }}
+          private-key: ${{ steps.dotenvx.outputs.GH_APP_KEY }}
       - name: Sync labels using config
         uses: crazy-max/ghaction-github-labeler@v5
         with:
