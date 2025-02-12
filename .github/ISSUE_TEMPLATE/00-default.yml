@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-issue-forms.json
 name: Default issue form for everything
 description: >-
   We use this issue form to easily triage things for our TriageOps GitHub
@@ -14,7 +15,7 @@ body:
         @ajhalili2006's public issue tracker in GitHub is used to track work and
         todos, alongside a lot of automation work using GitHub Actions and
         webhooks behind the scenes. Please see [this
-        page](https://wiki.andreijiroh.xyz/meta/issue-tracker/github) on his
+        page](https://wiki.andreijiroh.dev/meta/issue-tracker/github) on his
         wiki for more detailed guidance.
 
         Note that issues filed here will be synchorized to GitLab, sourcehut and
@@ -30,24 +31,20 @@ body:
         alongside the wiki page linked above._
 
         * Do not file vulnerability reports publicly here. Visit
-        <https://andreijiroh.xyz/contact/security> and project-specific security
+        <https://andreijiroh.dev/contact/security> and project-specific security
         policy for instructions.
 
         * If a project has its own issue tracker, please use it instead to avoid
         inconvenience to the maintainers.
 
-        *
-        [Search](https://github.com/issues?q=org%3Aandreijiroh-dev+user%3Aajhalili2006+)
-        for any duplicates first and subscribe to that issue instead unless the
+        * [Search][search-link] for any duplicates first and subscribe to that issue instead unless the
         issue is different.
 
         ## Preflight Checks
 
-        [Search across Anrei Jiroh's GitHub
-        repositories](https://github.com/issues?q=org%3Aandreijiroh-dev+user%3Aajhalili2006+)
+        [Search across Anrei Jiroh's GitHub repositories][search-link]
         for any duplicates before continuing. You must tick the dupe check,
-        alongside the agreement to the [Community Code of
-        Conduct](https://go.andreijiroh.xyz/coc), otherwise you are blocked from
+        alongside the agreement to the [Community Code of Conduct][coc], otherwise you are blocked from
         submitting the issue.
 
 
@@ -69,26 +66,28 @@ body:
 
         This is optional and you can skip ahead if none. Feel free to add one by
         editing the issue description.
+
+        [search-link]: https://github.com/issues?q=org%3Aandreijiroh-dev+org%3Aajhalili2006-experiments+org%3Aajhalili2006-archive+user%3Aajhalili2006+
+        [coc]: https://policies.recaptime.dev/code-of-conduct
   - type: checkboxes
     id: dupe_checks
     attributes:
       label: Preflight Checks
       options:
         - label: >-
-            I have [searched issues across Anrei Jiroh's GitHub
-            repositories](https://github.com/issues?q=org%3Aandreijiroh-dev+user%3Aajhalili2006+)
+            I have [searched issues across Andrei Jiroh's GitHub
+            repositories](https://github.com/issues?q=org%3Aandreijiroh-dev+org%3Aajhalili2006-experiments+org%3Aajhalili2006-archive+user%3Aajhalili2006+)
             and there are no duplicates found.
           required: true
         - label: >-
-            I agree to the [Community Code of Conduct](https://go.andreijiroh.xyz/coc).
+            I agree to the [Recap Time Squd Community Code of Conduct](https://policies.recaptime.dev/code-of-conduct).
           required: true
   - type: dropdown
     id: type
     attributes:
       label: What type of issue this ticket should fall under?
       description: >-
-        This is used by our labeler job in TriageOps workflow and GitHub project
-        automations to help label things and to allow us to keep things tidy.
+        This is used by our labeler job in TriageOps workflow and GitHub project automations to help label things and to allow us to keep things tidy.
       options:
         - personal-stuff
         - school
@@ -96,7 +95,7 @@ body:
         - community
         - open-source
         - multifandom
-        - hackclub-acrade
+        - hackclub
     validations:
       required: true
   - type: textarea
@@ -116,14 +115,12 @@ body:
     attributes:
       label: Is this issue related to one of ~ajhalili2006's project?
       description: >-
-        Your issue might be moved/copied into respective project's issue
-        tracker. Note that the list only include projects that Andrei Jiroh
-        currently maintains, excluding external and Recap Time Squad-related
-        projects.
+        Your issue might be moved/copied into respective project's issue tracker. Note that the list only include projects that Andrei Jiroh
+        currently maintains, excluding external and Recap Time Squad-related projects.
       multiple: true
       options:
-        - dotfiles-modern
-        - dotfiles-legacy
+        - dotfiles
+        - nixops-config
         - website
         - wiki
         - docker-images
@@ -131,6 +128,7 @@ body:
         - mirrors-cdn
         - api-servers
         - scripts-toolkit
+        - infraops
         - donatetgbot
         - None of the above
   - type: markdown
@@ -138,5 +136,4 @@ body:
       value: >
         ---
 
-        _This issue form was generated with help from [Issue Forms
-        Creator](https://issue-forms-creator.netlify.app)_
+        _This issue form was made with help from [Issue Forms Creator](https://issue-forms-creator.netlify.app)_

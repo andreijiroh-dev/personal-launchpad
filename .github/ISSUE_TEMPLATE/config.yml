@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-issue-config.json
+contact_links:
+  - name: Report security issues
+    url: https://andreijiroh.dev/contact/security
+    about: To responsibly report security vunlerability and issues for Andrei Jiroh's projects, please go to the dedicated security contact page.
+  - name: Sponsorships and donations
+    url: https://sponsors.andreijiroh.dev
+    about: Considering sponsoring @ajhalili2006?
