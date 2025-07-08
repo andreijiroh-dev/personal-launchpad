@@ -45,7 +45,7 @@ body:
       options:
         - label: "I have [searched issues across Andrei Jiroh's GitHub repositories](https://github.com/issues?q=org%3Aandreijiroh-dev%20org%3Aandreijirohdev-labs%20org%3Aajhalili2006-archive%20user%3Aajhalili2006), and there are no duplicates found."
           required: true
-        - label: "I agree to the [Recap Time Squd Community Code of Conduct](https://policies.recaptime.dev/code-of-conduct).|
+        - label: "I agree to the [Recap Time Squd Community Code of Conduct](https://policies.recaptime.dev/code-of-conduct)."
           required: true
   - type: dropdown
     id: type
