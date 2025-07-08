@@ -2,7 +2,7 @@
 
 ## The basics
 - name: bug
-  description: Something isn't working
+  description: "Something isn't working"
   color: d73a4a
 - name: documentation
   description: Improvements or additions to the documentation, especially on the wiki and contributing guidelines.
@@ -19,7 +19,7 @@
   description: Extra attention and assistance required
   color: 008672
 - name: invalid
-  description: This doesn't seem right
+  description: "This doesn't seem right"
   color: e4e669
 - name: missing info
   from_name: question
@@ -33,7 +33,7 @@
 
 # project specifics
 - name: hackclub
-  from_name: hackclub-arcade
+  #from_name: hackclub-arcade
   color: ec3750
   description: Issues relating to Hack Club, its YSWS and related projects/programs, and HCB.
 - name: open-source
@@ -41,6 +41,18 @@
   descriptions: Issues relating to open-source work and projects.
 - name: recaptime-dev
   description: "Issues relating to RecapTime.dev and its projects (including Community Lorebooks)"
+
+# school related
+- name: school
+  color: ffc107
+  description: "Issues relating to schoolworks and academic life"
+- name: cs50x
+  color: d41c0f
+  description: "Issues relating to the CS50x course from Harvard on edX"
+
+# misc
+- name: personal-stuff
+  description: "Issues relating to personal life (DO NOT LEAK SENSTIVE INFO)"
 
 ## GitHub issue form identifiers
 - name: 'gh-issue-form: default'
