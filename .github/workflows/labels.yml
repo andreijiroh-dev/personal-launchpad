@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@09d2acae674a48949e3602304ab46fd20ae0c42f
+        uses: actions/checkout@8edcb1bdb4e267140fa742c62e395cd74f332709
       - name: Download .env.ci from central repo
         run: wget -O .env.ci https://github.com/andreijiroh-dev/dotenvx-secretstore/raw/main/.env.ci
       - name: Load secrets via dotenvx
@@ -29,7 +29,7 @@ jobs:
           path: .env.ci
           key: ${{ secrets.DOTENV_META_SECRETS_KEY_CI }}
         id: dotenvx
-      - uses: actions/create-github-app-token@93c1f04d6f14ea5b416e7a8dfd80446101c6adef
+      - uses: actions/create-github-app-token@d7ee28121512479a18a428398f948ac5ce15fb4c
         id: app-token
         with:
           app-id: ${{ steps.dotenvx.outputs.GH_APP_ID }}

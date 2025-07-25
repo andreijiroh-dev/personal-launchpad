@@ -1,4 +1,4 @@
-# This YAML is where we manage GitHub labels as code
+# This YAML is where we manage GitHub labels as code for the issue tracker.
 
 ## The basics
 - name: bug
@@ -22,7 +22,7 @@
   description: "This doesn't seem right"
   color: e4e669
 - name: missing info
-  from_name: question
+  #from_name: question
   description: Further information is requested
   color: d876e3
 - name: wontfix
