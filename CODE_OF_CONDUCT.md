@@ -11,6 +11,6 @@ themselves due to personal reasons).
 
 ## Contacts for moderation team
 
-**Main contact**: [Andrei Jiroh Halili](https://ajhalili2006.start.page)
+**Main contact**: [Andrei Jiroh Halili](https://linktr.ee/ajhalili2006) (@ajhalili2006)
 
 **Alternative contacts**: TBA
