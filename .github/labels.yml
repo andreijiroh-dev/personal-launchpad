@@ -53,6 +53,9 @@
 # misc
 - name: personal-stuff
   description: "Issues relating to personal life (DO NOT LEAK SENSTIVE INFO)"
+- name: blog
+  description: "Issues relating to the blog, including blog posts and its underlying infrastructure/code that runs it"
+  color: 8D7471
 
 ## GitHub issue form identifiers
 - name: 'gh-issue-form: default'
@@ -63,5 +66,8 @@
   color: 8D7471
 - name: "gh-issue-form: public-inbox"
   description: "[FOR TRIAGEOPS ONLY - DO NOT REMOVE] Public inbox-styled threads"
+- name: "gh-issue-form: blog"
+  description: "[FOR TRIAGEOPS ONLY - DO NOT REMOVE] Issues related to the blog"
+  color: 8D7471
 
 ## TODO: Import labels from sourcehut todo and JetBrains YouTrack/Space Cloud counterparts.
