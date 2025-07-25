@@ -1,0 +1,88 @@
+name: Blog post ideas and feedback
+description: Brainstorming for a blog post or feedback on an existing one.
+title: "[blog] descriptive but short title here"
+labels:
+  - "gh-issue-form: blog"
+  - "blog"
+  - "enhancement"
+assignees: [ajhalili2006, mfhellscapes]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Blog Post Ideas and Feedback
+
+        Use this form to brainstorm ideas for a blog post or provide feedback on an existing one. If you have a specific topic in mind, please include it in the title.
+
+        > [!NOTE]
+        > Please see [this page](https://wiki.andreijiroh.dev/meta/issue-tracker/github) on his wiki for more detailed guidance. Note that issues filed here will be synchronized to other places (i.e. GitLab and sourcehut), including edits to the issue description and title, label and status changes. Comments and replies are not synchronized for the time being due to API rate limits (especially to ensure the stability of sourcehut infrastructure).
+
+        ## General guidelines
+
+        _See [the contributing guidelines for the full instructions](https://github.com/andreijiroh-dev/personal-launchpad/blob/main/CONTRIBUTING.md), alongside the wiki page linked above._
+
+        - If you providing feedback on an existing blog post, please include a link to it so I can find easily.
+        - If you are suggesting a new blog post, please include a short description of the topic and any specific points you would like to cover.
+
+        ## Preflight Checks
+
+        [Search across Anrei Jiroh's GitHub repositories][search-link] for any duplicates before continuing. You must tick the dupe check, alongside the agreement to the [Community Code of Conduct][coc], otherwise you are blocked from submitting the issue.
+
+        [search-link]: https://github.com/issues?q=org%3Aandreijiroh-dev%20org%3Aandreijirohdev-labs%20org%3Aajhalili2006-archive%20user%3Aajhalili2006
+        [coc]: https://policies.recaptime.dev/code-of-conduct
+  - type: checkboxes
+    id: dupe_checks
+    attributes:
+      label: Preflight Checks
+      options:
+        - label: "I have [searched issues across Andrei Jiroh's GitHub repositories](https://github.com/issues?q=org%3Aandreijiroh-dev%20org%3Aandreijirohdev-labs%20org%3Aajhalili2006-archive%20user%3Aajhalili2006), and there are no duplicates found."
+          required: true
+        - label: "I agree to the [Recap Time Squd Community Code of Conduct](https://policies.recaptime.dev/code-of-conduct)."
+          required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL of the blog post (if applicable)
+      description: If providing feedback, please paste the full URL in this field (especially if you are viewing a mirror of it on another platform like Substack and friends).
+      placeholder: https://blog.andreijiroh.dev/...
+    validations:
+      required: false
+  - type: dropdown
+    id: tags
+    attributes:
+      label: Blog tags
+      description: Mainly used for brainstorming purposes, but also to suggest what to tag on existing ones.
+      multiple: true
+      options:
+        - Awesome Neurodiversity
+        - Birthday Posts
+        - CS50x
+        - Film Notes
+        - Furries
+        - Hack Club
+        - Meta
+        - multifandom hellscapes (in the multiverse)
+        - Recap Time Squad
+        - Music Mixtapes
+        - News
+        - On Loop Nights
+        - Open Source Work
+        - Status Updates
+        - Stellapent Cier
+        - The Bloody Hell PH
+        - The Traumatized Autistics Department (TTAD)
+        - Web Dev
+    validations:
+      required: false
+  - type: textarea
+    id: about_this_issue
+    attributes:
+      label: About this issue
+      description: Please describe as many details as possible here.
+    validations:
+      required: true
+  - type: textarea
+    id: resources
+    attributes:
+      label: Prior Art / Additional/Related Resources
+      description: Links to related issues and resources.

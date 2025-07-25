@@ -1,5 +1,8 @@
 # yaml-language-server: $schema=https://json.schemastore.org/github-issue-config.json
 contact_links:
+  - name: Moving to GitLab SaaS soon
+    url: https://gitlab.com/andreijiroh-dev/personal-launchpad/-/issues
+    about: I am still accepting issues on GitHub, but I will be moving to GitLab SaaS soon. Please open issues on GitLab instead.
   - name: Report security issues
     url: https://andreijiroh.dev/contact/security
     about: To responsibly report security vunlerability and issues for Andrei Jiroh's projects, please go to the dedicated security contact page.

@@ -4,14 +4,18 @@ description: We use this issue form to easily triage things for our TriageOps Gi
 title: a descriptive but short title here
 labels:
   - 'gh-issue-form: default'
+assignees: [ajhalili2006]
 body:
   - type: markdown
     attributes:
       value: >-
         # Default GitHub issue form - instructions for use
 
-        @ajhalili2006's public issue tracker in GitHub is used to track work and
-        todos, alongside a lot of automation work using GitHub Actions and webhooks behind the scenes. Please see [this page](https://wiki.andreijiroh.dev/meta/issue-tracker/github) on his wiki for more detailed guidance. Note that issues filed here will be synchronized to other places (i.e. GitLab and sourcehut), including edits to the issue description and title, label and status changes. Comments and replies are not synchronized for the time being due to API rate limits (especially to ensure the stability of sourcehut infrastructure).
+        @ajhalili2006's public issue tracker in GitHub is used to track work and todos, alongside a lot of automation work using GitHub Actions and webhooks behind the scenes and being his public inbox for those who don't like sending plain text emails. 
+        
+        
+        > [!NOTE]
+        > Please see [this page](https://wiki.andreijiroh.dev/meta/issue-tracker/github) on his wiki for more detailed guidance. Note that issues filed here will be synchronized to other places (i.e. GitLab and sourcehut), including edits to the issue description and title, label and status changes. Comments and replies are not synchronized for the time being due to API rate limits (especially to ensure the stability of sourcehut infrastructure).
 
         ## General guidelines
 
