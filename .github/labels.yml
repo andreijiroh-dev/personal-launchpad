@@ -70,6 +70,7 @@
   color: "8D7471"
 - name: "gh-issue-form: public-inbox"
   description: "[FOR TRIAGEOPS ONLY - DO NOT REMOVE] Public inbox-styled threads"
+  color: "8D7471"
 - name: "gh-issue-form: blog"
   description: "[FOR TRIAGEOPS ONLY - DO NOT REMOVE] Issues related to the blog"
   color: "8D7471"
