@@ -39,7 +39,7 @@
   color: "ec3750"
   description: Issues relating to Hack Club, its YSWS and related projects/programs, and HCB.
 - name: open-source
-  color: "ffffff"
+  color: "12ab0a"
   descriptions: Issues relating to open-source work and projects.
 - name: recaptime-dev
   description: "Issues relating to RecapTime.dev and its projects (including Community Lorebooks)"
@@ -55,11 +55,11 @@
 
 # misc
 - name: personal-stuff
-  description: "Issues relating to personal life (DO NOT LEAK SENSTIVE INFO)"
-  color: "ededed"
+  description: "Issues relating to personal stuff (DO NOT LEAK SENSTIVE INFO)"
+  color: "e9f505"
 - name: blog
-  description: "Issues relating to the blog, including blog posts and its underlying infrastructure/code that runs it"
-  color: "ededed"
+  description: "Issues relating to the blog, including blog posts and its underlying infra"
+  color: "080808"
 
 ## GitHub issue form identifiers
 - name: 'gh-issue-form: default'
