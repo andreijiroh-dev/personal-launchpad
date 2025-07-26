@@ -15,6 +15,10 @@ on:
       - '.github/labels.yml'
       - '.github/workflows/labels.yml'
 
+permissions: 
+  contents: read
+  issues: write
+
 jobs:
   labels-manager:
     runs-on: ubuntu-latest
@@ -36,3 +40,4 @@ jobs:
           github-token: ${{ steps.dotenvx.outputs.GITHUB_TOKEN }}
           yaml-file: .github/labels.yml
           dry-run: ${{ github.event_name == 'pull_request' }}
+          skip-delete: true # for now, we don't want to delete labels
