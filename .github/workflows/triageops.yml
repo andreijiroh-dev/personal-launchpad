@@ -1,0 +1,65 @@
+# This is the main TriageOps workflow for automated issue management here at my public inbox
+# on GitHub.
+name: TriageOps
+
+on:
+  issues: 
+    types: [opened, edited, reopened, labeled, unlabeled, assigned, unassigned, closed]
+  issue_comment: 
+    types: [created]
+  schedule:
+    - cron: "0 7 * * *"
+
+# While these permissions for the GITHUB_TOKEN are unused due to us using our own
+# app token generated through actions/create-github-app-token, they are still required
+# to silence security warnings about missing explicit permissions.
+permissions:
+  actions: write
+  contents: write # only for delete-branch option
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    name: Manage stale issues
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || (github.event_name == 'issues' && github.event.action != 'labeled') || (github.event_name == 'issue_comment' && github.event.action == 'created')
+    steps:
+      - name: Download .env.ci from central repo
+        run: wget -O .env.ci https://github.com/andreijiroh-dev/dotenvx-secretstore/raw/main/.env.ci
+      - name: Load secrets via dotenvx
+        uses: andreijiroh-dev/dotenvx-action@main
+        with:
+          path: .env.ci
+          key: ${{ secrets.DOTENV_META_SECRETS_KEY_CI }}
+        id: dotenvx
+      - name: Provision GitHub app token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ steps.dotenvx.outputs.GH_APP_ID }}
+          private-key: ${{ steps.dotenvx.outputs.GH_APP_KEY }}
+      - name: Close stale issues
+        uses: actions/stale@v9
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          days-before-stale: 14
+          days-before-close: 7
+          stale-issue-label: 'stale'
+          exempt-issue-labels: 'question,personal-stuff,help wanted,stale-exempt'
+          start-date: "2025-07-27"
+          enable-statistics: 'true'
+          stale-issue-message: |
+            This issue is being marked as stale due to inactivity in the past 14 days.
+            It will be closed in the next 7 days if no further activity occurs, and may
+            be locked manually at the discretion of @ajhalili2006 (and other maintainers).
+          close-issue-message: |
+            This issue is now closed due to being stale in the last 21 days. You may
+            reopen this issue anytime unless it is manually locked.
+          stale-pr-message: |
+            This merge request is being marked as stale due to inactivity in the past 14 days.
+            It will be closed in the next 7 days if no further activity occurs, and may
+            be locked manually at the discretion of @ajhalili2006 (and other maintainers).
+          close-pr-message: |
+            This merge request is now closed due to being stale in the last 21 days. You may
+            reopen this merge request anytime if you don't delete your branch unless it is
+            manually locked.

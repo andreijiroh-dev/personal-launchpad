@@ -32,6 +32,12 @@
 - name: upstream
   description: The issue is being flagged on or imported/copied from upstream.
   color: "ededed"
+- name: stale
+  description: Tagged for inactivity in the last 14 days, will close in 7 days by TriageOps.
+  color: 237da0
+- name: stale-exempt
+  description: Exempted from auto-close due to staleness.
+  color: 237da0
 
 # project specifics
 - name: hackclub
