@@ -9,6 +9,13 @@ on:
     types: [created]
   schedule:
     - cron: "0 7 * * *"
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        description: 'Run the workflow in dry-run mode'
+        required: false
+        default: true
+        type: boolean
 
 # While these permissions for the GITHUB_TOKEN are unused due to us using our own
 # app token generated through actions/create-github-app-token, they are still required
@@ -23,7 +30,7 @@ jobs:
   stale:
     name: Manage stale issues
     runs-on: ubuntu-latest
-    if: github.event_name == 'schedule' || (github.event_name == 'issues' && github.event.action != 'labeled') || (github.event_name == 'issue_comment' && github.event.action == 'created')
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' || (github.event_name == 'issues' && github.event.action != 'labeled') || (github.event_name == 'issue_comment' && github.event.action == 'created')
     steps:
       - name: Download .env.ci from central repo
         run: wget -O .env.ci https://github.com/andreijiroh-dev/dotenvx-secretstore/raw/main/.env.ci
@@ -42,6 +49,7 @@ jobs:
         uses: actions/stale@v9
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+          debug-only: ${{ inputs.dry-run || github.event_name == 'pull_request' }}
           days-before-stale: 14
           days-before-close: 7
           stale-issue-label: 'stale'

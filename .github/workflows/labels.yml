@@ -2,6 +2,12 @@ name: TriageOps - Labels Manager
 
 on:
   workflow_dispatch:
+    inputs:
+      dry-run:
+        description: 'Run the workflow in dry-run mode'
+        required: false
+        default: true
+        type: boolean
   push:
     branches:
       - 'main'
@@ -39,5 +45,5 @@ jobs:
         with:
           github-token: ${{ steps.dotenvx.outputs.GITHUB_TOKEN }}
           yaml-file: .github/labels.yml
-          dry-run: ${{ github.event_name == 'pull_request' }}
+          dry-run: ${{ inputs.dry-run || github.event_name == 'pull_request' }}
           skip-delete: true # for now, we don't want to delete labels
