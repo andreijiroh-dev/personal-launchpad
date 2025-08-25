@@ -59,6 +59,17 @@
   color: "d41c0f"
   description: "Issues relating to the CS50x course from Harvard on edX"
 
+# multifandom
+- name: multifandom
+  description: "Issues relating to multifandom activities, including fanworks, fanfics, and other related stuff"
+  color: "ff69b4"
+- name: "fandom:furry"
+  description: "Issues relating to the furry fandom"
+  color: "ff9bdb"
+- name: "fandom:edm"
+  description: "Issues relating to the electronic music community and subgenres"
+  color: "8b00ff"
+
 # misc
 - name: personal-stuff
   description: "Issues relating to personal stuff (DO NOT LEAK SENSTIVE INFO)"
